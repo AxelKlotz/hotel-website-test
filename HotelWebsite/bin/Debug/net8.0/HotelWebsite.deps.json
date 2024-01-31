@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HotelWebsite/1.0.0": {
+        "dependencies": {
+          "HotelWebsite.Logic": "1.0.0"
+        },
+        "runtime": {
+          "HotelWebsite.dll": {}
+        }
+      },
+      "HotelWebsite.Data/1.0.0": {
+        "runtime": {
+          "HotelWebsite.Data.dll": {}
+        }
+      },
+      "HotelWebsite.Logic/1.0.0": {
+        "dependencies": {
+          "HotelWebsite.Data": "1.0.0"
+        },
+        "runtime": {
+          "HotelWebsite.Logic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HotelWebsite/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelWebsite.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelWebsite.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

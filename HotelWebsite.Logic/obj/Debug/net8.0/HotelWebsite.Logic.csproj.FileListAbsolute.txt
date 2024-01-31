@@ -1,0 +1,15 @@
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\bin\Debug\net8.0\HotelWebsite.Logic.deps.json
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\bin\Debug\net8.0\HotelWebsite.Logic.dll
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\bin\Debug\net8.0\HotelWebsite.Logic.pdb
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\bin\Debug\net8.0\HotelWebsite.Data.dll
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\bin\Debug\net8.0\HotelWebsite.Data.pdb
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.csproj.AssemblyReference.cache
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.AssemblyInfoInputs.cache
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.AssemblyInfo.cs
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.csproj.CoreCompileInputs.cache
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.csproj.CopyComplete
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.dll
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\refint\HotelWebsite.Logic.dll
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.pdb
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\ref\HotelWebsite.Logic.dll
