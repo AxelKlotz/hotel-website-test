@@ -34,3 +34,4 @@ C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite\bin\Deb
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite\bin\Debug\net8.0\HotelWebsite.Data.pdb
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite\obj\Debug\net8.0\HotelWebsite.csproj.AssemblyReference.cache
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite\obj\Debug\net8.0\HotelWebsite.csproj.CopyComplete
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite\obj\Debug\net8.0\HotelWebsite.sourcelink.json

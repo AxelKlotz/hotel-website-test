@@ -106,3 +106,4 @@ C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebpageLogic.Te
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebpageLogic.Tests\obj\Debug\net8.0\HotelWebpageLogic.Tests.pdb
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebpageLogic.Tests\obj\Debug\net8.0\HotelWebpageLogic.Tests.genruntimeconfig.cache
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebpageLogic.Tests\obj\Debug\net8.0\ref\HotelWebpageLogic.Tests.dll
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebpageLogic.Tests\obj\Debug\net8.0\HotelWebpageLogic.Tests.sourcelink.json

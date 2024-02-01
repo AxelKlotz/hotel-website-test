@@ -1,3 +1,4 @@
+using HotelWebsite.Logic;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HotelWebsite.Pages
@@ -13,7 +14,8 @@ namespace HotelWebsite.Pages
 
         public void OnGet()
         {
-
+            HotelLogic logic = new HotelLogic();
+            logic.BookRoom(101, 2);
         }
     }
 }

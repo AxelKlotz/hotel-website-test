@@ -13,3 +13,4 @@ C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\o
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\refint\HotelWebsite.Logic.dll
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.pdb
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\ref\HotelWebsite.Logic.dll
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Logic\obj\Debug\net8.0\HotelWebsite.Logic.sourcelink.json

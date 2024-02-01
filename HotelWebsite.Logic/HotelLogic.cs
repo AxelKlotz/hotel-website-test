@@ -23,5 +23,20 @@ namespace HotelWebsite.Logic
         {
             return HotelRooms;
         }
+
+        //Function that updates the HotelRooms list when a room is booked
+        public void BookRoom(int roomNumber, int days)
+        {
+            var room = HotelRooms.FirstOrDefault(r => r.RoomNumber == roomNumber);
+            room.IsVacant = false;
+            room.BookedDaysLeft = days;
+        }
+
+        //Function to calculate the booking price of a room based on the number of days
+        public int CalculatePrice(int roomNumber, int days)
+        {
+            var room = HotelRooms.FirstOrDefault(r => r.RoomNumber == roomNumber);
+            return room.PricePerDay * days;
+        }
     }
 }

@@ -9,3 +9,4 @@ C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Data\ob
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Data\obj\Debug\net8.0\refint\HotelWebsite.Data.dll
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Data\obj\Debug\net8.0\HotelWebsite.Data.pdb
 C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Data\obj\Debug\net8.0\ref\HotelWebsite.Data.dll
+C:\Users\axelk\Documents\Visual Studio 2022\HotelWebTesting\HotelWebsite.Data\obj\Debug\net8.0\HotelWebsite.Data.sourcelink.json
