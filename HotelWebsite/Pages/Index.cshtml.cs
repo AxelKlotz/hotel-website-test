@@ -14,8 +14,10 @@ namespace HotelWebsite.Pages
 
         public void OnGet()
         {
+            //Function tests for debugging
             HotelLogic logic = new HotelLogic();
-            logic.BookRoom(101, 2);
+            logic.BookRoom(101, 2, "Smith");
+            logic.CalculatePrice(101, int.MaxValue);
         }
     }
 }
