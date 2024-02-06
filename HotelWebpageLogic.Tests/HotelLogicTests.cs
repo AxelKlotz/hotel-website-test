@@ -12,13 +12,109 @@ namespace HotelWebpageLogic.Tests
             // Given
             HotelLogic logic = new();
 
-
             // When
             var returnedList = logic.GetRooms();
 
             // Then
             returnedList.Should().NotBeEmpty();
             returnedList.Should().BeOfType<List<HotelRoomModel>>();
+        }
+
+        [Fact]
+        public void GetSingleRoom_ShouldReturnSingleRoom()
+        {
+            // Given
+            HotelLogic logic = new();
+            int roomID = 101;
+            //Exact copy of what that room looks like in the static list
+            HotelRoomModel roomCopy = new HotelRoomModel { RoomNumber = 101, RoomType = "Single", HasBalcony = false, PricePerDay = 150, IsVacant = true, BookedDaysLeft = null, PersonWhoBooked = null };
+
+            // When
+            var returnedRoom = logic.GetSingleRoom(roomID);
+
+            // Then
+            returnedRoom.Should().NotBeNull();
+            returnedRoom.Should().BeOfType<HotelRoomModel>();
+            returnedRoom.Should().BeEquivalentTo(roomCopy);
+        }
+
+        //GetFilteredList Tests
+        [Fact]
+        public void GetFliteredList_FilterByVacantRooms_ShouldReturnFilteredList()
+        {
+            // Given
+            HotelLogic logic = new();
+            string attribute = "IsVacant";
+            string attributeValue = "true";
+            List<HotelRoomModel> roomList = logic.GetRooms();
+
+            // When
+            var returnedList = logic.GetFilteredList(attribute, attributeValue);
+
+            // Then
+            returnedList.Should().NotBeEmpty();
+            returnedList.Should().BeEquivalentTo(roomList.Where(r => r.IsVacant == true));
+        }
+
+        [Fact]
+        public void GetFilteredList_FilterByRoomType_ShouldReturnFilteredList()
+        {
+            // Given
+            HotelLogic logic = new();
+            string attribute = "RoomType";
+            string attributeValue = "Single";
+            List<HotelRoomModel> roomList = logic.GetRooms();
+
+            // When
+            var returnedList = logic.GetFilteredList(attribute, attributeValue);
+
+            // Then
+            returnedList.Should().NotBeEmpty();
+            returnedList.Should().BeEquivalentTo(roomList.Where(r => r.RoomType.Equals(attributeValue)));
+        }
+
+        [Fact]
+        public void GetFilteredList_AttributeDoesNotExist_ShouldThrowAgrumentException()
+        {
+            // Given
+            HotelLogic logic = new();
+            string attribute = "";
+            string attributeValue = "Single";
+
+            // When
+            Action test = () => logic.GetFilteredList(attribute, attributeValue);
+
+            // Then
+            test.Should().Throw<ArgumentException>();
+        }
+
+        [Fact]
+        public void GetFilteredList_BoolAttributeValueIsWrongFormat_ShouldThrowFormatException()
+        {
+            // Given
+            HotelLogic logic = new();
+            string attribute = "IsVacant";
+            string attributeValue = "Single";
+
+            // When
+            Action test = () => logic.GetFilteredList(attribute, attributeValue);
+
+            // Then
+            test.Should().Throw<FormatException>();
+        }
+        [Fact]
+        public void GetFilteredList_StringAttributeDoesNotExist_ShouldThrowAgrumentException()
+        {
+            // Given
+            HotelLogic logic = new();
+            string attribute = "RoomType";
+            string attributeValue = null;
+
+            // When
+            Action test = () => logic.GetFilteredList(attribute, attributeValue);
+
+            // Then
+            test.Should().Throw<ArgumentException>();
         }
 
         //BookRoom Tests
@@ -99,6 +195,22 @@ namespace HotelWebpageLogic.Tests
             test.Should().Throw<InvalidOperationException>();
         }
 
+        [Fact]
+        public void BookRoom_EmptyNameString_ShouldThrowArgumentException()
+        {
+            // Given
+            HotelLogic logic = new();
+            int roomNumber = 104;
+            int days = 2;
+            string name = "";
+
+            // When
+            Action test = () => logic.BookRoom(roomNumber, days, name);
+
+            // Then
+            test.Should().Throw<ArgumentException>();
+        }
+
         //CalculatePrice Tests
         [Fact]
         public void CalculatePrice_ShouldReturnCorrectPrice()
@@ -117,7 +229,7 @@ namespace HotelWebpageLogic.Tests
         }
 
         [Fact]
-        public void CalculatePrice_NumberOfDaysTooBig_ShouldReturnArgumentOutOfException()
+        public void CalculatePrice_NumberOfDaysTooBig_ShouldReturnArgumentOutOfRangeException()
         {
             // Given
             HotelLogic logic = new();
