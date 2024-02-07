@@ -7,13 +7,13 @@ namespace HotelWebpageLogic.Tests
     public class HotelLogicTests
     {
         [Fact]
-        public void GetRooms_ShouldReturnListOfHotelRoomModel()
+        public void GetAllRooms_ShouldReturnListOfHotelRoomModel()
         {
             // Given
             HotelLogic logic = new();
 
             // When
-            var returnedList = logic.GetRooms();
+            var returnedList = logic.GetAllRooms();
 
             // Then
             returnedList.Should().NotBeEmpty();
@@ -46,7 +46,7 @@ namespace HotelWebpageLogic.Tests
             HotelLogic logic = new();
             string attribute = "IsVacant";
             string attributeValue = "true";
-            List<HotelRoomModel> roomList = logic.GetRooms();
+            List<HotelRoomModel> roomList = logic.GetAllRooms();
 
             // When
             var returnedList = logic.GetFilteredList(attribute, attributeValue);
@@ -63,7 +63,7 @@ namespace HotelWebpageLogic.Tests
             HotelLogic logic = new();
             string attribute = "RoomType";
             string attributeValue = "Single";
-            List<HotelRoomModel> roomList = logic.GetRooms();
+            List<HotelRoomModel> roomList = logic.GetAllRooms();
 
             // When
             var returnedList = logic.GetFilteredList(attribute, attributeValue);
@@ -149,7 +149,7 @@ namespace HotelWebpageLogic.Tests
 
             // When
             logic.BookRoom(roomID, days, name);
-            List<HotelRoomModel> roomList = logic.GetRooms();
+            List<HotelRoomModel> roomList = logic.GetAllRooms();
 
             // Then
             roomList.Should().NotEqual(HotelRoomsList);
@@ -172,7 +172,7 @@ namespace HotelWebpageLogic.Tests
 
             // When
             Action test = () => logic.BookRoom(roomNumber, days, name);
-            HotelRoomModel room = logic.GetRooms().FirstOrDefault(r => r.RoomNumber == roomNumber);
+            HotelRoomModel room = logic.GetAllRooms().FirstOrDefault(r => r.RoomNumber == roomNumber);
 
             // Then
             test.Should().Throw<Exception>();
@@ -219,7 +219,7 @@ namespace HotelWebpageLogic.Tests
             HotelLogic logic = new();
             int roomID = 101;
             int days = 3;
-            var room = logic.GetRooms().FirstOrDefault(r => r.RoomNumber == roomID);
+            var room = logic.GetAllRooms().FirstOrDefault(r => r.RoomNumber == roomID);
 
             // When
             int result = logic.CalculatePrice(roomID, days);

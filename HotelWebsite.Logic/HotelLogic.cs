@@ -7,19 +7,18 @@ namespace HotelWebsite.Logic
 
         List<HotelRoomModel> hotelRooms = HotelRepository.HotelRooms;
 
-        public List<HotelRoomModel> GetRooms()
+        public List<HotelRoomModel> GetAllRooms()
         {
             return hotelRooms;
         }
 
-        //ToDo: Function to get a single room
         public HotelRoomModel GetSingleRoom(int roomNumber)
         {
             HotelRoomModel room = hotelRooms.First(r => r.RoomNumber == roomNumber);
             return room;
         }
 
-        //ToDo: Function to get list of rooms of a certain type using Where()
+        // Function to get a filtered list of the hotelrooms
         public List<HotelRoomModel> GetFilteredList(string attribute, string attributeValue)
         {
             List<HotelRoomModel> filteredList = new();
@@ -41,8 +40,6 @@ namespace HotelWebsite.Logic
             return filteredList;
         }
 
-        //ToDo: Function to cancel a booking
-
         //Function that updates the HotelRooms list when a room is booked
         public void BookRoom(int roomNumber, int days, string occupantName)
         {
@@ -56,6 +53,7 @@ namespace HotelWebsite.Logic
             room.PersonWhoBooked = occupantName;
             room.BookedDaysLeft = days;
         }
+        //ToDo: Function to cancel a booking
 
         //Function to calculate the booking price of a room based on the number of days
         public int CalculatePrice(int roomNumber, int days)

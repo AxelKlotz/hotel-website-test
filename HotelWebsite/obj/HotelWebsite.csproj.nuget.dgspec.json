@@ -154,6 +154,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\axelk\\Documents\\Visual Studio 2022\\HotelWebTesting\\HotelWebsite.Data\\HotelWebsite.Data.csproj": {
+                "projectPath": "C:\\Users\\axelk\\Documents\\Visual Studio 2022\\HotelWebTesting\\HotelWebsite.Data\\HotelWebsite.Data.csproj"
+              },
               "C:\\Users\\axelk\\Documents\\Visual Studio 2022\\HotelWebTesting\\HotelWebsite.Logic\\HotelWebsite.Logic.csproj": {
                 "projectPath": "C:\\Users\\axelk\\Documents\\Visual Studio 2022\\HotelWebTesting\\HotelWebsite.Logic\\HotelWebsite.Logic.csproj"
               }

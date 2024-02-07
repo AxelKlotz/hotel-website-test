@@ -5,11 +5,11 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelWebsite", "HotelWebsite\HotelWebsite.csproj", "{10995CA3-4B61-466D-807D-61C5E28D88C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelWebsite.Logic", "HotelWebsite.Logic\HotelWebsite.Logic.csproj", "{50AA12D0-9933-43DF-82D1-F74A198EA16E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelWebsite.Logic", "HotelWebsite.Logic\HotelWebsite.Logic.csproj", "{50AA12D0-9933-43DF-82D1-F74A198EA16E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelWebsite.Data", "HotelWebsite.Data\HotelWebsite.Data.csproj", "{627E3D67-C3FB-4208-A547-EE60CD9C2C04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelWebsite.Data", "HotelWebsite.Data\HotelWebsite.Data.csproj", "{627E3D67-C3FB-4208-A547-EE60CD9C2C04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelWebpageLogic.Tests", "HotelWebpageLogic.Tests\HotelWebpageLogic.Tests.csproj", "{3CFD0569-5969-4767-9EEC-D68CE624FAEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelWebpageLogic.Tests", "HotelWebpageLogic.Tests\HotelWebpageLogic.Tests.csproj", "{3CFD0569-5969-4767-9EEC-D68CE624FAEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

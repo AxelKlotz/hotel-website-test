@@ -20,3 +20,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.green {
+    background-color: limegreen
+}
+
+.red {
+    background-color: red
+}

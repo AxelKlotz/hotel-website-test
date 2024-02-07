@@ -4,7 +4,34 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <h1>Hotel Website</h1>
+</div>
+<div>
+    <button>Filter Rooms</button>
+    <select name="Filter">
+        <option value="">Select what to filter by</option>
+        <option value="IsVacant">Vacancy</option>
+        <option value="RoomType">Room Type</option>
+        <option value="HasBalcony">Balcony</option>
+    </select>
+</div>
+<div>
+    @foreach(var room in Model.Logic.GetAllRooms())
+    {
+        <div>
+            <h2>Room: @room.RoomNumber</h2>
+            <h2>@room.RoomType</h2>
+            <div>
+            @if (room.IsVacant)
+            {
+                <p class="green">Not currently booked</p>
+            }
+            else if (!room.IsVacant)
+            {
+                <p class="red">Currently booked by: @room.PersonWhoBooked</p>
+            }
+            </div>
+        </div>
+    }
 </div>
