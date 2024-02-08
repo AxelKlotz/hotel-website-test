@@ -20,11 +20,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+.room-container {
+    background-color: lightgrey;
+    margin: 5px;
+}
 
 .green {
-    background-color: limegreen
+    background-color: limegreen;
 }
 
 .red {
-    background-color: red
+    background-color: red;
 }

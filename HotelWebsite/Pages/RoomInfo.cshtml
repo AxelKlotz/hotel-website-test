@@ -2,3 +2,41 @@
 @model HotelWebsite.Pages.RoomInfoModel
 @{
 }
+<h1>Room Info</h1>
+<div>
+    <div class="room-container">
+    <h1>@Model.SelectedRoom.RoomNumber</h1>
+    <h1>@Model.SelectedRoom.RoomType</h1>
+    @if (Model.SelectedRoom.HasBalcony)
+    {
+        <h3>This room has a balcony!</h3>
+    }
+        <p>Cost of room per day: @Model.SelectedRoom.PricePerDay</p>
+    </div>
+    <div>
+        @if (Model.SelectedRoom.IsVacant)
+        {
+            <h2>This room is available to book for $@Model.SelectedRoom.PricePerDay per day.</h2>
+            <label for="numberDays">Number of days you want to book</label><br>
+            <input type="number" id="numberDays" asp-for="DaysBooked"/>
+            <form>
+                <button type="submit">Calculate price</button>
+            </form>
+
+            <label id="totalPrice" asp-for="TotalCost"></label>
+        }
+        else if (!Model.SelectedRoom.IsVacant)
+        {
+            <p>This room has been booked by: @Model.SelectedRoom.PersonWhoBooked</p>
+            <p>The room has been booked for @Model.SelectedRoom.BookedDaysLeft more days.</p>
+        }
+    </div>
+    @if (Model.SelectedRoom.IsVacant)
+    {
+        <div>
+            <label for="bookInName">Insert lastname of the person that the room is booked in</label><br>
+            <input type="text" id="bookInName"/>
+            <button>Book this room</button>
+        </div>
+    }
+</>

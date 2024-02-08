@@ -15,11 +15,25 @@
         <option value="RoomType">Room Type</option>
         <option value="HasBalcony">Balcony</option>
     </select>
+    <select name="VacancyFilter" hidden>
+        <option value="true">Is Vacant</option>
+        <option value="false">Is not Vacant</option>
+    </select>
+    <select name="RoomTypeFilter" hidden>
+        <option value="Single">Single bed</option>
+        <option value="Double">Double bed</option>
+        <option value="King">Kingsize bed</option>
+        <option value="Penthouse">Penthouse</option>
+    </select>
+    <select name="BalconyFilter" hidden>
+        <option value="true">Has Balcony</option>
+        <option value="false">Does not have Balcony</option>
+    </select>
 </div>
 <div>
     @foreach(var room in Model.Logic.GetAllRooms())
     {
-        <div>
+        <div class="room-container">
             <h2>Room: @room.RoomNumber</h2>
             <h2>@room.RoomType</h2>
             <div>
@@ -32,6 +46,7 @@
                 <p class="red">Currently booked by: @room.PersonWhoBooked</p>
             }
             </div>
+            <a asp-page="/RoomInfo" asp-route-room="@room.RoomNumber">See this room</a>
         </div>
     }
 </div>

@@ -16,7 +16,7 @@ namespace HotelWebsite.Pages
 
         public void OnGet()
         {
-            //ToDo: Send
+            //ToDo: Show correct dropdown menu after picking filter
         }
     }
 }
