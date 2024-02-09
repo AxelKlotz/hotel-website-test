@@ -46,6 +46,10 @@ namespace HotelWebsite.Logic
             var room = hotelRooms.First(r => r.RoomNumber == roomNumber);
             if (!room.IsVacant)
                 throw new Exception("Selected room was not vacant");
+            if (days <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             if (string.IsNullOrWhiteSpace(occupantName))
                 throw new ArgumentException();
             // Update list with new booking
@@ -53,14 +57,13 @@ namespace HotelWebsite.Logic
             room.PersonWhoBooked = occupantName;
             room.BookedDaysLeft = days;
         }
-        //ToDo: Function to cancel a booking
 
         //Function to calculate the booking price of a room based on the number of days
         public int CalculatePrice(int roomNumber, int days)
         {
             var room = hotelRooms.FirstOrDefault(r => r.RoomNumber == roomNumber);
             int price = room.PricePerDay * days;
-            if (price <= 0 || price >= int.MaxValue)
+            if (price < 0 || price >= int.MaxValue)
                 throw new ArgumentOutOfRangeException();
 
             return price;

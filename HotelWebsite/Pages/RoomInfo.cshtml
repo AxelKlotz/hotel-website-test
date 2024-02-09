@@ -18,12 +18,25 @@
         {
             <h2>This room is available to book for $@Model.SelectedRoom.PricePerDay per day.</h2>
             <label for="numberDays">Number of days you want to book</label><br>
-            <input type="number" id="numberDays" asp-for="DaysBooked"/>
-            <form>
-                <button type="submit">Calculate price</button>
+            <form asp-page-handler="Calculate" method="post" asp-route-room="@Model.SelectedRoom.RoomNumber">
+                <input type="number" asp-for="DaysBooked"/>
+                <input type="number" asp-for="SelectedRoom.RoomNumber" hidden/>
+                <button type="submit" id="CalculateBtn">Calculate price</button>
             </form>
 
-            <label id="totalPrice" asp-for="TotalCost"></label>
+            <label id="totalPrice" asp-for="TotalCost">Total cost: $@Model.TotalCost</label>
+            <div>
+                <label for="bookInName">Insert lastname of the person that the room is booked in and number of days</label><br>
+
+                <form asp-page-handler="BookRoom" method="post">
+                    <input type="text" id="bookInName" asp-for="BookingName" />
+                    <input type="number" asp-for="SelectedRoom.RoomNumber" hidden />
+                    <input type="number" asp-for="DaysBooked" />
+
+                    <button type="submit" id="BookBtn">Book this room</button>
+                </form>
+
+            </div>
         }
         else if (!Model.SelectedRoom.IsVacant)
         {
@@ -31,12 +44,5 @@
             <p>The room has been booked for @Model.SelectedRoom.BookedDaysLeft more days.</p>
         }
     </div>
-    @if (Model.SelectedRoom.IsVacant)
-    {
-        <div>
-            <label for="bookInName">Insert lastname of the person that the room is booked in</label><br>
-            <input type="text" id="bookInName"/>
-            <button>Book this room</button>
-        </div>
-    }
+    
 </>

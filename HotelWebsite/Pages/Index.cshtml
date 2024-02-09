@@ -8,30 +8,33 @@
     <h1>Hotel Website</h1>
 </div>
 <div>
-    <button>Filter Rooms</button>
-    <select name="Filter">
+    <form asp-page-handler="Filter" method="post">
+    <button id="FilterBtn" type="submit" disabled>Filter Rooms</button>
+    
+    <select id="FilterList" asp-for="Filter"> 
         <option value="">Select what to filter by</option>
         <option value="IsVacant">Vacancy</option>
         <option value="RoomType">Room Type</option>
         <option value="HasBalcony">Balcony</option>
     </select>
-    <select name="VacancyFilter" hidden>
+    <select id="VacancyFilter" asp-for="VacancyChoice" style="display: none">
         <option value="true">Is Vacant</option>
         <option value="false">Is not Vacant</option>
     </select>
-    <select name="RoomTypeFilter" hidden>
+    <select id="RoomTypeFilter" asp-for="RoomChoice" style="display: none">
         <option value="Single">Single bed</option>
         <option value="Double">Double bed</option>
         <option value="King">Kingsize bed</option>
         <option value="Penthouse">Penthouse</option>
     </select>
-    <select name="BalconyFilter" hidden>
+    <select id="BalconyFilter" asp-for="BalconyChoice" style="display: none">
         <option value="true">Has Balcony</option>
         <option value="false">Does not have Balcony</option>
     </select>
+    </form>
 </div>
 <div>
-    @foreach(var room in Model.Logic.GetAllRooms())
+    @foreach(var room in Model.Rooms)
     {
         <div class="room-container">
             <h2>Room: @room.RoomNumber</h2>

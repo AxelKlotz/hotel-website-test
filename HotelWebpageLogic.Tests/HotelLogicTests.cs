@@ -159,7 +159,7 @@ namespace HotelWebpageLogic.Tests
         }
 
         [Fact]
-        public void BookRoom_RoomIsNotVacant_ShouldThrowErrorMessage() //Could make it impossible to do in UI, but still good to have just in case
+        public void BookRoom_RoomIsNotVacant_ShouldThrowErrorMessage() //Made it impossible to do in UI, but still good to have just in case
         {
             // Given
             HotelLogic logic = new();
@@ -211,6 +211,22 @@ namespace HotelWebpageLogic.Tests
             test.Should().Throw<ArgumentException>();
         }
 
+        [Fact]
+        public void BookRoom_NumberOfDaysTooLow_ShouldThrowArgumentOutOfRangeException()
+        {
+            // Given
+            HotelLogic logic = new();
+            int roomNumber = 104;
+            int days = -1;
+            string name = "Smith";
+
+            // When
+            Action test = () => logic.BookRoom(roomNumber, days, name);
+
+            // Then
+            test.Should().Throw<ArgumentOutOfRangeException>();
+        }
+
         //CalculatePrice Tests
         [Fact]
         public void CalculatePrice_ShouldReturnCorrectPrice()
@@ -229,7 +245,7 @@ namespace HotelWebpageLogic.Tests
         }
 
         [Fact]
-        public void CalculatePrice_NumberOfDaysTooBig_ShouldReturnArgumentOutOfRangeException()
+        public void CalculatePrice_NumberOfDaysTooBig_ShouldThrowArgumentOutOfRangeException()
         {
             // Given
             HotelLogic logic = new();

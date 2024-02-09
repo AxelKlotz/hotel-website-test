@@ -8,18 +8,28 @@ namespace HotelWebsite.Pages
     public class RoomInfoModel : PageModel
     {
         HotelLogic logic = new();
-        public HotelRoomModel SelectedRoom { get; set; }
+        [BindProperty]
+        public HotelRoomModel SelectedRoom { get; set; } = new();
         [BindProperty]
         public int DaysBooked { get; set; }
+        [BindProperty]
+        public string BookingName { get; set; }
         public int TotalCost { get; set; }
+
         public void OnGet(int room)
         {
             SelectedRoom = logic.GetSingleRoom(room);
         }
-        public void OnPost() //Activates OnGet again when pressing calculate button
+        public void OnPostCalculate(int room)
         {
-            //Calculate price
             TotalCost = logic.CalculatePrice(SelectedRoom.RoomNumber, DaysBooked);
+            SelectedRoom = logic.GetSingleRoom(room);
+        }
+        public IActionResult OnPostBookRoom()
+        {
+            logic.BookRoom(SelectedRoom.RoomNumber, DaysBooked, BookingName);
+            return RedirectToPage("Index");
+            //ToDo: Make it so you can't book a room zero or negative number of days in UI
         }
     }
 }
